@@ -1,0 +1,21 @@
+.boton{
+	border-radius: 15px;
+}
+
+.azul{
+	background-color:#000099;
+}
+
+.rojo{
+	background-color: #CC0000;
+}
+
+.menu-items{
+	--ion-background-color: transparent !important;
+}
+
+.contenido{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+}

@@ -1,0 +1,32 @@
+<div *ngIf='usuario !== null' class='ion-page' id="main">
+    <ion-header class="header-home">
+        <ion-toolbar align='center' color='elemento'>
+            <ion-title>
+                Relevamiento Visual
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content color='fondo'>
+        <ng-container *ngIf='listaUsuarios.length > 0'>
+            <div *ngFor='let u of listaUsuarios'>
+                <ion-item lines='none' color='elemento' style='margin: 10px; border-radius: 15px'>
+                    <img [src]="u.foto" width="100" height="100" style="border-radius: 10px">
+                    <ion-label style='margin-left: 5px'>
+                        <p>Nombre: {{u.nombre}}</p>
+                        <p>Dni: {{u.dni}}</p>
+                        <p>Correo: {{u.correo}}</p>
+                        <ng-container *ngIf='usuario === "admin@admin.com"'>
+                            <p>Contraseña: {{u.contrasenia}}</p>
+                        </ng-container>
+                    </ion-label>
+                </ion-item>
+            </div>
+        </ng-container>
+        <ion-button *ngIf='usuario === "admin@admin.com"' color='elemento' expand='block' routerLink='/alta-usuario'>Cargar nuevo Usuario</ion-button>
+    </ion-content>
+    <ion-footer>
+        <ion-toolbar color="fondo">
+            <ion-button color='danger' expand='block' (click)='cerrarSesion()'>Cerrar Sesion</ion-button>
+        </ion-toolbar>
+    </ion-footer>
+</div>

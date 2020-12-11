@@ -1,0 +1,95 @@
+.btn {
+    font-size: 10px;
+    font-family: Verdana, Helvetica;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999999;
+}
+
+.fondoAnimado {
+    height: 100%;
+    position: absolute;
+}
+
+ion-title {
+    font-family: 'Open Sans', sans-serif, cursive;
+    font-size: 20px;
+}
+
+.snow {
+    --color: snow;
+    font-size: 2em !important;
+
+}
+
+ion-button {
+    margin-top: 2% !important;
+}
+
+ion-card {
+    border-radius: 15px;
+    position: relative;
+    --background: #A00B73;
+}
+
+ion-item {
+    --ion-background-color: transparent !important;
+    --ion-text-color: var(--ion-color-elemento);
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+    color: snow;
+}
+
+h1::after,
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #ffdf26;
+    top: 0.6em;
+}
+
+h1::before {
+    left: -109px;
+}
+
+h1::after {
+
+    left: 160px;
+}
+
+.divTop {
+    z-index: 99999;
+    top: -100;
+}
+
+ion-back-button {
+    size: 20%;
+}
+
+.loading {
+    z-index: 99999999 !important;
+    width: 150px;
+    height: 150px;
+    position: fixed !important;
+    top: 35%;
+    left: 30%;
+}
+
+.validation-errors {
+    padding: 0 10px;
+}
+
+.error-message {
+    color: var(--ion-color-elemento);
+}
